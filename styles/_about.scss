@@ -1,0 +1,71 @@
+h2{
+    text-align: center;
+    padding-top: 2rem;
+    background: $gradient;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: rgba(0, 0, 0, 0.2);
+}
+.form-section1{
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-column-gap: 10px;
+    margin: 0;
+    .ownpic{
+        border-radius: 50%;
+        width: 98%;
+        margin: auto;
+        min-height: 90vh;
+        opacity: 0.9;
+    
+    }
+    .detail-me{
+        margin: auto;
+        min-height:90vh;
+        width: 1080px;
+        height: auto;
+
+    }
+
+}
+.w3-card-4,
+.w3-hover-shadow:hover {
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19)
+}
+
+.w3-container:after,
+.w3-container:before,
+.w3-panel:after,
+.w3-panel:before,
+.w3-row:after,
+.w3-row:before,
+.w3-row-padding:after,
+.w3-row-padding:before,
+.w3-cell-row:before,
+.w3-cell-row:after,
+.w3-clear:after,
+.w3-clear:before,
+.w3-bar:before,
+.w3-bar:after {
+    content: "";
+    display: table;
+    clear: both
+}
+
+.w3-panel {
+    margin-top: 16px;
+    margin-bottom: 16px
+}
+.w3-blue,
+.w3-hover-blue:hover {
+    color: rgb(247, 123, 22) !important;
+    text-shadow:dark;
+    background-color: #2196F3 !important
+}
+.w3-blue-grey,
+.w3-hover-blue-grey:hover,
+.w3-blue-gray,
+.w3-hover-blue-gray:hover {
+    color: #fff !important;
+    background-color: #607d8b !important
+}

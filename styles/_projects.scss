@@ -1,0 +1,38 @@
+.projects{
+    width: 98%;
+    margin: auto;
+    min-height: 90vh;
+    @include flex(space-around, center, row);
+
+    flex-wrap: wrap;
+    // justify-items:center;
+    // align-items: center;
+    margin: 2rem;
+    h2{
+        margin: 5rem;
+        text-align: center; 
+        padding: 2rem 5rem;
+        background: $gradient;
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: rgba(0, 0, 0, 0.2);
+
+    }
+}
+.hname{
+    text-align: center;
+    padding: 2rem;
+}
+.pic{
+    padding: 0px 10px 20px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    transition: 0.3s;
+
+}
+
+.pic:hover{
+    box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.2), 0 0 2px 0 rgba(0, 0, 0, 0.19);
+    transform:scale(1.1);
+
+}
