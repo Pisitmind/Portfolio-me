@@ -26,7 +26,7 @@ h1{
         justify-self: center;
         margin: auto;
         // min-height: 90vh;
-        padding: 30px;
+        padding: 10px 10px;
     
     }
     .overlay {
@@ -51,9 +51,9 @@ h1{
         grid-area:sidebar;
         margin: auto;
         justify-self: center;
-        align-self: stretch;
+        // align-self: stretch;
         // justify-items: stretch;
-        padding: 10px;
+        padding: 10px 10px;
         // min-height:100vh;
         // width: 1080px;
         // height: auto;
@@ -61,54 +61,53 @@ h1{
 
     }
     .contact-me{
-        position: relative;
-        text-align: center;
-        align-items: center;
-        transition-duration: 0.4s;
-        border-radius: 4px;
-        background-color: white;
-        color: black;
-        border: 2px solid #4CAF50;
+        text-align: right;
+        padding-right: 10px;
         
-        /* Green */
         }
+        .btn{
+            background-color: white;
+            color: black;
+            border: 2px solid #4CAF50;
+            padding: 10px 20px;
+            transition-duration: 0.4s;
+        }
+        .btn:hover{
+                background-color: #4CAF50;
+                /* Green */
+                color: white;
+        }
+    .text-content{
+        padding:10px 10px;
+    }
     
 
-    .contact-me:hover {
-            background-color: #4CAF50;
-            /* Green */
-            color: white;
-        }
+    // .contact-me:hover {
+    //         background-color: #4CAF50;
+    //         /* Green */
+    //         color: white;
+    //     }
     }
-
 .w3-card-4,
 .w3-hover-shadow:hover {
     box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);
 
 }
 
-.w3-container:after,
-.w3-container:before,
-.w3-panel:after,
-.w3-panel:before{
-    content: "";
-    display: table;
-    clear: both;
-    padding:1rem;
-    text-justify: start;
-    text-align: justify;
-    .contact-me{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-}
 
-.w3-panel {
-    margin-top: 16px;
-    margin-bottom: 16px;
-
-}
+// .w3-panel:after,
+// .w3-panel:before{
+//     display: table;
+//     clear: both;
+//     padding:10px 10px;
+//     text-justify: start;
+//     text-align: justify;
+//     .contact-me{
+//         display: flex;
+//         justify-content: center;
+//         align-items: center;
+//     }
+// }
 .w3-blue,
 .w3-hover-blue:hover {
     text-transform: uppercase;

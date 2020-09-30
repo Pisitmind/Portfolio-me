@@ -461,7 +461,7 @@ h1 {
   -ms-grid-column-align: center;
       justify-self: center;
   margin: auto;
-  padding: 30px;
+  padding: 10px 10px;
 }
 
 .form-section1 .overlay {
@@ -492,69 +492,37 @@ h1 {
   margin: auto;
   -ms-grid-column-align: center;
       justify-self: center;
-  -ms-flex-item-align: stretch;
-      -ms-grid-row-align: stretch;
-      align-self: stretch;
-  padding: 10px;
+  padding: 10px 10px;
 }
 
 .form-section1 .contact-me {
-  position: relative;
-  text-align: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-transition-duration: 0.4s;
-          transition-duration: 0.4s;
-  border-radius: 4px;
+  text-align: right;
+  padding-right: 10px;
+}
+
+.form-section1 .btn {
   background-color: white;
   color: black;
   border: 2px solid #4CAF50;
-  /* Green */
+  padding: 10px 20px;
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
 }
 
-.form-section1 .contact-me:hover {
+.form-section1 .btn:hover {
   background-color: #4CAF50;
   /* Green */
   color: white;
+}
+
+.form-section1 .text-content {
+  padding: 10px 10px;
 }
 
 .w3-card-4,
 .w3-hover-shadow:hover {
   -webkit-box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);
           box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-.w3-container:after,
-.w3-container:before,
-.w3-panel:after,
-.w3-panel:before {
-  content: "";
-  display: table;
-  clear: both;
-  padding: 1rem;
-  text-justify: start;
-  text-align: justify;
-}
-
-.w3-container:after .contact-me,
-.w3-container:before .contact-me,
-.w3-panel:after .contact-me,
-.w3-panel:before .contact-me {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.w3-panel {
-  margin-top: 16px;
-  margin-bottom: 16px;
 }
 
 .w3-blue,
