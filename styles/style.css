@@ -286,7 +286,7 @@ nav ul {
 }
 
 .pic {
-  padding: 0px 10px 20px;
+  padding: 0px 10px 30px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   -webkit-box-align: start;
@@ -297,8 +297,8 @@ nav ul {
 }
 
 .pic:hover {
-  -webkit-box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.2), 0 0 2px 0 rgba(0, 0, 0, 0.19);
-          box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.2), 0 0 2px 0 rgba(0, 0, 0, 0.19);
+  -webkit-box-shadow: 0 1px 0 1 rgba(0, 0, 0, 0.2), 1 0 1px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 1px 0 1 rgba(0, 0, 0, 0.2), 1 0 1px 0 rgba(0, 0, 0, 0.19);
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
 }
@@ -434,30 +434,89 @@ h2 {
   background-clip: text;
   -webkit-background-clip: text;
   color: rgba(0, 0, 0, 0.2);
+  padding-bottom: 2rem;
+}
+
+h1 {
+  text-align: left;
+  padding: 2rem;
 }
 
 .form-section1 {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (50%)[2];
-      grid-template-columns: repeat(2, 50%);
-  grid-column-gap: 10px;
-  margin: 0;
+  -ms-grid-columns: 50% 50%;
+      grid-template-columns: 50% 50%;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+      grid-template-areas: "header header " "main  sidebar" "footer footer";
+  margin: 1;
 }
 
 .form-section1 .ownpic {
-  border-radius: 50%;
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: main;
   width: 98%;
+  -ms-grid-column-align: center;
+      justify-self: center;
   margin: auto;
-  min-height: 90vh;
-  opacity: 0.9;
+  padding: 30px;
+}
+
+.form-section1 .overlay {
+  position: auto;
+  bottom: 0;
+  background: black;
+  background: rgba(0, 0, 0, 0.5);
+  /* Black see-through */
+  color: #f1f1f1;
+  width: 100%;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+  opacity: 0;
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+.form-section1 .ownpic:hover .overlay {
+  opacity: 1;
 }
 
 .form-section1 .detail-me {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: sidebar;
   margin: auto;
-  min-height: 90vh;
-  width: 1080px;
-  height: auto;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  -ms-flex-item-align: stretch;
+      -ms-grid-row-align: stretch;
+      align-self: stretch;
+  padding: 10px;
+}
+
+.form-section1 .contact-me {
+  position: relative;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
+  border-radius: 4px;
+  background-color: white;
+  color: black;
+  border: 2px solid #4CAF50;
+  /* Green */
+}
+
+.form-section1 .contact-me:hover {
+  background-color: #4CAF50;
+  /* Green */
+  color: white;
 }
 
 .w3-card-4,
@@ -469,20 +528,28 @@ h2 {
 .w3-container:after,
 .w3-container:before,
 .w3-panel:after,
-.w3-panel:before,
-.w3-row:after,
-.w3-row:before,
-.w3-row-padding:after,
-.w3-row-padding:before,
-.w3-cell-row:before,
-.w3-cell-row:after,
-.w3-clear:after,
-.w3-clear:before,
-.w3-bar:before,
-.w3-bar:after {
+.w3-panel:before {
   content: "";
   display: table;
   clear: both;
+  padding: 1rem;
+  text-justify: start;
+  text-align: justify;
+}
+
+.w3-container:after .contact-me,
+.w3-container:before .contact-me,
+.w3-panel:after .contact-me,
+.w3-panel:before .contact-me {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .w3-panel {
@@ -492,17 +559,12 @@ h2 {
 
 .w3-blue,
 .w3-hover-blue:hover {
-  color: #f77b16 !important;
-  text-shadow: dark;
-  background-color: #2196F3 !important;
-}
-
-.w3-blue-grey,
-.w3-hover-blue-grey:hover,
-.w3-blue-gray,
-.w3-hover-blue-gray:hover {
-  color: #fff !important;
-  background-color: #607d8b !important;
+  text-transform: uppercase;
+  -webkit-text-stroke: 4px transparent;
+  color: #abf5b5;
+  -webkit-text-stroke: 0.5px #ff7300;
+  background-image: -webkit-gradient(linear, left top, right top, from(#38d39f), to(#38a4d3)) !important;
+  background-image: linear-gradient(left, #38d39f, #38a4d3) !important;
 }
 
 @media screen and (max-width: 1332px) {
@@ -595,6 +657,11 @@ h2 {
   form {
     padding: 0rem;
     width: 100%;
+  }
+  .ownpic {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 50rem;
+            flex: 1 1 50rem;
   }
   .ownpic img {
     width: 100%;
